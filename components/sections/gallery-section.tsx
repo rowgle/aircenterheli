@@ -11,14 +11,14 @@ export function GallerySection() {
   const rafRef = useRef<number | null>(null);
 
   const images = [
-    { src: "https://res.cloudinary.com/dtbz0xaw6/image/upload/v1777470839/220629-N-DW158-1064_leymoi.jpg", alt: "H225 Pre-mission preparation" },
-    { src: "https://res.cloudinary.com/dtbz0xaw6/image/upload/v1780060732/N591AC_2022_H225_008_jzkujy.jpg", alt: "B407 Venice operations" },
-    { src: "https://res.cloudinary.com/dtbz0xaw6/image/upload/v1780599283/2021_FlyingPair_Hoist_001_rigma0.jpg", alt: "Helicopter operations" },
-    { src: "https://res.cloudinary.com/dtbz0xaw6/image/upload/v1780060526/N591AC_2022_H225_006_cf9llz.jpg", alt: "AS350 Antarctica operations" },
-    { src: "https://res.cloudinary.com/dtbz0xaw6/image/upload/v1777320602/thumbnail_Image-1_1_-2_b5oswg.jpg", alt: "H225 in flight" },
-    { src: "https://res.cloudinary.com/dtbz0xaw6/image/upload/v1775505708/201229-N-NH257-1095_zafryx.jpg", alt: "H225 Hoist operations" },
-    { src: "https://res.cloudinary.com/dtbz0xaw6/image/upload/v1777403442/2021_H225_FlyingPair_Hoist_001_fwcmpn.jpg", alt: "H225 Flying pair hoist" },
-    { src: "https://res.cloudinary.com/dtbz0xaw6/image/upload/v1780598596/N552AC_2019_H225_002_xtmrk2.jpg", alt: "Air Center mission support" },
+    { src: "/images/moveright.jpg", alt: "Ship deck landing" },
+    { src: "/images/swimjumper.jpg", alt: "Rescue operations" },
+    { src: "/images/nightlife.jpg", alt: "NVG operations" },
+    { src: "/images/bladedude.jpg", alt: "Bagram mechanic" },
+    { src: "/images/carrierland.jpg", alt: "Aircraft carrier landing" },
+    { src: "/images/litterhoist.jpg", alt: "Casevac litter extraction" },
+    { src: "/images/slingload.jpg", alt: "F35 engine module sling load" },
+    { src: "/images/careerscrew.jpg", alt: "SpaceX crew members" },
   ];
 
   // Calculate section height based on content width

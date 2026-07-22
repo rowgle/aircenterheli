@@ -83,7 +83,7 @@ export function PhilosophySection() {
                 }}
               >
                 <Image
-                  src="https://res.cloudinary.com/dtbz0xaw6/image/upload/v1776263703/597AC_azhdct.jpg"
+                  src="/images/fieldgoal.jpg"
                   alt="Military helicopter operations"
                   fill
                   className="object-cover"
@@ -107,7 +107,7 @@ export function PhilosophySection() {
                 }}
               >
                 <Image
-                  src="https://res.cloudinary.com/dtbz0xaw6/image/upload/v1777320979/52435061866_e284a79cfc_h_2_px3fpd.jpg"
+                  src="/images/crewrecovery.jpg"
                   alt="Commercial helicopter services"
                   fill
                   className="object-cover"

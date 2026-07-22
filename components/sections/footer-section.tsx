@@ -13,7 +13,7 @@ const footerLinks = {
     { label: "About Us", href: "#about" },
     { label: "Credentials", href: "#credentials" },
     { label: "Fleet", href: "#fleet" },
-    { label: "Careers", href: "#" },
+    { label: "Careers", href: "/careers" },
   ],
   contact: [
     { label: "Headquarters", href: "#" },

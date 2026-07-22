@@ -39,7 +39,7 @@ export function TestimonialsSection() {
       {/* About Image */}
       <div className="relative aspect-[16/9] w-full">
         <Image
-          src="https://res.cloudinary.com/dtbz0xaw6/image/upload/v1776259184/N554AC_2021_H225_PrepMission_027_odgloi.jpg"
+          src="/images/goldenhour.jpg"
           alt="Air Center Helicopters Antarctica operations"
           fill
           className="object-cover"

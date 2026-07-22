@@ -50,7 +50,7 @@ export function EditorialSection() {
           muted
           playsInline
           className="absolute inset-0 h-full w-full object-cover"
-          src="https://res.cloudinary.com/dtbz0xaw6/video/upload/v1780081807/2245-landing-page-v03_d2kllr.mp4"
+          src="/videos/vertrephighlightvid.mp4"
         />
         <div className="absolute inset-0 bg-black/20" />
       </div>

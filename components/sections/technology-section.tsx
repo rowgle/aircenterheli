@@ -60,26 +60,26 @@ function ScrollRevealText({ text }: { text: string }) {
 
 const sideImages = [
   {
-    src: "https://res.cloudinary.com/dtbz0xaw6/image/upload/v1780068765/antartica-image-showcase-03_cdeahq.png",
-    alt: "AS350 Antarctica operations",
+    src: "/images/careerspilot2.jpg",
+    alt: "Vertrep pilot",
     position: "left",
     span: 1,
   },
   {
-    src: "https://res.cloudinary.com/dtbz0xaw6/image/upload/v1776263750/N451AC_2020_B412_003-2_f9med0.jpg",
-    alt: "Helicopter crew operations",
+    src: "/images/backender2.jpg",
+    alt: "CASEVAC crew member",
     position: "left",
     span: 1,
   },
   {
-    src: "https://res.cloudinary.com/dtbz0xaw6/image/upload/v1780069354/sea-lift-command-image-02_ow4voh.png",
-    alt: "Flight operations",
+    src: "/images/careerspilot3.jpg",
+    alt: "Spacex pilot",
     position: "right",
     span: 1,
   },
   {
-    src: "https://res.cloudinary.com/dtbz0xaw6/image/upload/v1780060532/597AC-2_lvbdrt.jpg",
-    alt: "Training operations",
+    src: "/images/backender1.jpg",
+    alt: "Training crew member",
     position: "right",
     span: 1,
   },
@@ -198,7 +198,7 @@ export function TechnologySection() {
               }}
             >
               <Image
-                src="https://res.cloudinary.com/dtbz0xaw6/image/upload/v1776434738/N554AC_2021_H225_PrepMission_035_ceo0g3.jpg"
+                src="/images/shadow.jpg"
                 alt="Antarctica seal camp operations"
                 fill
                 className="object-cover"

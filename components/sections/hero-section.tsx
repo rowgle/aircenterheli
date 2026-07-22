@@ -7,25 +7,25 @@ const word = "MISSION READY";
 
 const sideImages = [
   {
-    src: "https://res.cloudinary.com/dtbz0xaw6/image/upload/v1780065393/USPH-0023-0271-2_yt4ctp.jpg",
+    src: "/images/diver.jpg",
     alt: "Helicopter deck operations",
     position: "left",
     span: 1,
   },
   {
-    src: "https://res.cloudinary.com/dtbz0xaw6/image/upload/v1777320979/52435061866_e284a79cfc_h_2_px3fpd.jpg",
+    src: "/images/swimteam.jpg",
     alt: "Naval helicopter support",
     position: "left",
     span: 1,
   },
   {
-    src: "https://res.cloudinary.com/dtbz0xaw6/image/upload/v1776433840/2022_Hoist_002_kygrib.jpg",
+    src: "/images/commsup.jpg",
     alt: "AS350 Antarctica operations",
     position: "right",
     span: 1,
   },
   {
-    src: "https://res.cloudinary.com/dtbz0xaw6/image/upload/v1780060526/N591AC_2022_H225_006_cf9llz.jpg",
+    src: "/images/gunner.jpg",
     alt: "225 hoist operations",
     position: "right",
     span: 1,
@@ -126,7 +126,7 @@ export function HeroSection() {
               }}
             >
               <Image
-                src="https://res.cloudinary.com/dtbz0xaw6/image/upload/v1775506735/N554AC_2021_H225_Highlights_016-2_vszz3g.jpg"
+                src="/images/achipatch.jpg"
                 alt="H225 Pre-mission preparation"
                 fill
                 className="object-cover"

@@ -6,32 +6,32 @@ const services = [
   {
     title: "Expeditionary Airlift",
     description: "Contingency Operations",
-    image: "https://res.cloudinary.com/dtbz0xaw6/image/upload/v1777320884/53782420911_a8ec282f26_b-2_ixvjgc.jpg",
+    image: "/images/evacuationpolice.jpg",
   },
   {
     title: "Ship-Based Services",
     description: "Vertical Replenishment",
-    image: "https://res.cloudinary.com/dtbz0xaw6/image/upload/v1780598596/N552AC_2019_H225_002_xtmrk2.jpg",
+    image: "/images/hookem.jpg",
   },
   {
     title: "Personnel Recovery & SAR",
     description: "Search and Rescue",
-    image: "https://res.cloudinary.com/dtbz0xaw6/image/upload/v1780060557/N591AC_2022_H225_Hoist_016_2_qsjr6k.jpg",
+    image: "/images/rainbowboat.jpg",
   },
   {
     title: "MEDEVAC / CASEVAC",
     description: "Medical Evacuation",
-    image: "https://res.cloudinary.com/dtbz0xaw6/image/upload/v1780060980/1759258804005_dyxofn.jpg",
+    image: "/images/prcasevac.jpg",
   },
   {
     title: "Aircraft Management",
     description: "Fleet Operations & Maintenance",
-    image: "https://res.cloudinary.com/dtbz0xaw6/image/upload/v1777479616/USPH-0023-0278_jjw2q6.jpg",
+    image: "/images/mechanicsun.jpg",
   },
   {
     title: "Technical Training",
     description: "Pilots & Maintenance",
-    image: "https://res.cloudinary.com/dtbz0xaw6/image/upload/v1777485729/IMG_3011_iilxb4.jpg",
+    image: "/images/simlegs.jpg",
   },
 ];
 
