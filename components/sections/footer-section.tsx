@@ -16,11 +16,11 @@ const footerLinks = {
     { label: "Careers", href: "/careers" },
   ],
   contact: [
-    { label: "Headquarters", href: "#" },
-    { label: "Spinks Airport", href: "#" },
-    { label: "Burleson, TX", href: "#" },
-    { label: "Contact Us", href: "#contact" },
-  ],
+  { label: "Headquarters", href: "#" },
+  { label: "Spinks Airport", href: "#" },
+  { label: "Burleson, TX", href: "#" },
+  { label: "Contact Us", href: "/contact" },
+],
 };
 
 export function FooterSection() {
@@ -99,8 +99,23 @@ export function FooterSection() {
       <div className="border-t border-border px-6 py-6 md:px-12 lg:px-20">
         <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
           <p className="text-xs text-muted-foreground">
-            2026 Air Center Helicopters. All rights reserved.
-          </p>
+  2026 Air Center Helicopters. All rights reserved. |{" "}
+  <a
+    href="/disclaimers"
+    className="hover:text-foreground transition-colors"
+  >
+    Disclaimers
+  </a>
+  {" "}| Developed by{" "}
+  <a
+    href="https://rowgle.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-muted-foreground hover:text-[#ff6600] transition-colors"
+  >
+    Rowgle
+  </a>
+</p>
 
           <div className="flex items-center gap-2 text-xs text-muted-foreground">
             <span>Fly America Act</span>
@@ -113,13 +128,15 @@ export function FooterSection() {
           {/* Social Links */}
           <div className="flex items-center gap-4">
             <Link
-              href="mailto:contact@achi-tx.com"
+              href="/employees"
               className="text-xs text-muted-foreground transition-colors hover:text-foreground"
             >
-              contact@achi-tx.com
+              Employees
             </Link>
             <Link
-              href="#"
+              href="https://www.linkedin.com/company/aircenter"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-xs text-muted-foreground transition-colors hover:text-foreground"
             >
               LinkedIn

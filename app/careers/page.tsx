@@ -30,7 +30,7 @@ export default function CareersPage() {
     },
     {
       id: "PIC",
-      title: "Second Pilot in Command",
+      title: "Pilot Second in Command",
       location: "Fort Worth, TX + Worldwide Deployments",
       type: "Full-Time",
       department: "Flight Operations",

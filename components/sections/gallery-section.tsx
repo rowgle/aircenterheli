@@ -14,11 +14,11 @@ export function GallerySection() {
     { src: "/images/moveright.jpg", alt: "Ship deck landing" },
     { src: "/images/swimjumper.jpg", alt: "Rescue operations" },
     { src: "/images/nightlife.jpg", alt: "NVG operations" },
-    { src: "/images/bladedude.jpg", alt: "Bagram mechanic" },
+    { src: "/images/loaddrop.jpg", alt: "Bagram mechanic" },
     { src: "/images/carrierland.jpg", alt: "Aircraft carrier landing" },
     { src: "/images/litterhoist.jpg", alt: "Casevac litter extraction" },
     { src: "/images/slingload.jpg", alt: "F35 engine module sling load" },
-    { src: "/images/careerscrew.jpg", alt: "SpaceX crew members" },
+    { src: "/images/cargoapproach.jpg", alt: "Cargo approach" },
   ];
 
   // Calculate section height based on content width
