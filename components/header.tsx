@@ -22,12 +22,12 @@ export function Header({ onCharterRequest }: HeaderProps) {
   }, []);
 
   const handleCharterClick = () => {
-  console.log("CHARTER REQUEST button clicked!"); 
-  if (onCharterRequest) {
-    onCharterRequest();
-    setIsMenuOpen(false);
-  }
-};
+    console.log("CHARTER REQUEST button clicked!");
+    if (onCharterRequest) {
+      onCharterRequest();
+      setIsMenuOpen(false);
+    }
+  };
 
   return (
     <header
@@ -42,15 +42,15 @@ export function Header({ onCharterRequest }: HeaderProps) {
     >
       <div className="flex items-center justify-between transition-all duration-300 px-2 pl-4 py-2">
         {/* Logo */}
-        <Link href="#" className="flex items-center">
-          <Image
-            src="/images/logoblack.png"
-            alt="Air Center Helicopters"
-            width={180}
-            height={60}
-            className={`h-12 w-auto transition-all duration-300 ${isScrolled ? "" : "brightness-0 invert"}`}
-          />
-        </Link>
+<Link href="/" className="flex items-center">
+  <Image
+    src="/images/logoblack.png"
+    alt="Air Center Helicopters"
+    width={180}
+    height={60}
+    className={`h-12 w-auto transition-all duration-300 ${isScrolled ? "" : "brightness-0 invert"}`}
+  />
+</Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden items-center gap-8 md:flex">
@@ -94,9 +94,17 @@ export function Header({ onCharterRequest }: HeaderProps) {
           >
             About
           </Link>
+          <Link
+  href="/careers"
+  className={`text-sm transition-colors ${
+    isScrolled ? "text-muted-foreground hover:text-foreground" : "text-white/70 hover:text-white"
+  }`}
+>
+  Careers
+</Link>
         </nav>
 
-        {/* CTA Button - Now opens the modal */}
+        {/* CTA Button */}
         <div className="hidden items-center gap-6 md:flex">
           <button
             onClick={handleCharterClick}
@@ -140,6 +148,9 @@ export function Header({ onCharterRequest }: HeaderProps) {
             <Link href="#about" className="text-lg text-foreground" onClick={() => setIsMenuOpen(false)}>
               About
             </Link>
+            <Link href="/careers" className="text-lg text-foreground" onClick={() => setIsMenuOpen(false)}>
+  Careers
+</Link>
 
             {/* Mobile Charter Request Button */}
             <button

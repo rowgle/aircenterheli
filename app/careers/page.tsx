@@ -13,69 +13,47 @@ export default function CareersPage() {
 
   const positions = [
     {
-      id: "ap-mechanic",
-      title: "A&P Mechanic (Part 145)",
-      location: "Fort Worth, TX (Spinks Airport)",
-      type: "Full-Time",
-      department: "Maintenance",
-      experience: "3+ years",
-      description:
-        "Join our FAA Part 145 Repair Station team maintaining H225, AS350, and Bell 412 helicopters. You will perform scheduled and unscheduled maintenance, inspections, and repairs to keep our fleet mission-ready.",
-      requirements: [
-        "Current A&P certificate",
-        "Experience with Airbus and/or Bell platforms preferred",
-        "Strong attention to detail and documentation skills",
-        "Ability to work in a fast-paced, safety-focused environment",
-      ],
-    },
+  id: "ap-mechanic",
+  title: "A&P Mechanic (Part 145)",
+  location: "Burleson, TX (Spinks Airport)",
+  type: "Full-Time",
+  department: "Maintenance",
+  experience: "2+ years recent helicopter experience",
+  description:
+    "Air Center Helicopters is accepting resumes for licensed A&P Helicopter Mechanics to fill immediate openings at the Burleson, Texas location. Ideal candidates will have 2yrs recent helicopter experience, FAR Part 135/Part 145 experience preferred. Airbus AS350, EC225/AS332, Bell 206, 212/412 experience is a plus. Relocation assistance available for the right candidates. Preference will be given to applicants with verifiable Sheet Metal experience. Part 135 positions will require travel up to 50% of the time.",
+  requirements: [
+    "Candidates must hold an A&P License",
+    "Candidates must be US citizens",
+    "FAA Part 135/145 experience preferred",
+    "Must be familiar with FAA Regulations and Standards",
+    "Must be able to multi task and handle a fast paced environment",
+    "Must be able to travel at short notice",
+    "Maintenance and Modification experience",
+    "Avionics installation experience",
+    "Sheet metal experience",
+  ],
+},
     {
-      id: "PIC",
-      title: "Pilot Second in Command",
-      location: "Fort Worth, TX + Worldwide Deployments",
-      type: "Full-Time",
-      department: "Flight Operations",
-      experience: "Commercial Certificate + 1,500 hours",
-      description:
-        "Fly charter, utility, SAR, and expeditionary missions. Experience with Airbus H225, AS350, or Bell 412 is a plus. Deployments may include austere and shipboard environments.",
-      requirements: [
-        "Commercial Helicopter Certificate with Instrument Rating",
-        "1,500 total helicopter hours preferred",
-        "NVG experience preferred",
-        "Clean FAA and medical record",
-      ],
-    },
-    {
-      id: "avionics-technician",
-      title: "Avionics Technician",
-      location: "Fort Worth, TX",
-      type: "Full-Time",
-      department: "Maintenance",
-      experience: "2+ years",
-      description:
-        "Install, troubleshoot, and maintain advanced avionics systems on modern helicopter platforms. Work closely with the Part 145 team to keep aircraft fully mission capable.",
-      requirements: [
-        "Avionics experience on rotorcraft preferred",
-        "Familiarity with glass cockpits and modern avionics suites",
-        "Strong troubleshooting and diagnostic skills",
-        "Ability to read and interpret wiring diagrams",
-      ],
-    },
-    {
-      id: "operations-manager",
-      title: "Operations Manager",
-      location: "Fort Worth, TX",
-      type: "Full-Time",
-      department: "Management",
-      experience: "5+ years",
-      description:
-        "Lead flight operations, scheduling, and compliance for charter and government contract programs. Ensure safe, efficient, and regulatory-compliant operations.",
-      requirements: [
-        "Strong background in helicopter operations or aviation management",
-        "Experience with Part 135 and/or government contracts preferred",
-        "Excellent leadership and communication skills",
-        "Ability to manage multiple priorities under pressure",
-      ],
-    },
+  id: "PIC",
+  title: "VertRep SIC Pilot (EC225)",
+  location: "Fort Worth, TX + Worldwide Deployments",
+  type: "Full-Time",
+  department: "Flight Operations",
+  experience: "1,500 Helicopter Flight Hours",
+  description:
+    "As an EC225 VertRep SIC pilot, you'll be joining an elite group of aviators providing global airlift support services to the U.S. Navy and the Department of Defense supporting their Combat Logistics Force ships that are deployed worldwide. In this position, you'll be instrumental in upholding Air Center's reputation for operational and performance excellence while maintaining unparalleled safety and operational readiness. Rotational Schedule is 45 days on/45 days off.",
+  requirements: [
+    "1,500 Helicopter flight hours",
+    "100 hrs flight time within the past 12 months",
+    "Current FAA Class II Medical Certificate",
+    "Must be able to obtain/maintain DOD Secret Clearance",
+    "External load experience",
+    "Night flying experience (NVG)",
+    "Experience with Offshore Operations, Shipboard, VERTREP or other Navy Operations",
+    "Type-certificated with multi-engine aircraft EC225 (similar size) flying with a two-pilot (PIC/SIC) operation",
+    "Must be a US Citizen",
+  ],
+},
   ];
 
   const filteredPositions =

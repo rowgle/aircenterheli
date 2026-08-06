@@ -146,7 +146,7 @@ export default function AuthenticationCard() {
             <div className="flex-1 flex flex-col justify-center space-y-6">
               <div className="text-center space-y-2">
                 <h1 className="text-2xl font-semibold text-white">ACHI EMPLOYEES</h1>
-                <p className="text-white/70">Sign in to the company portal</p>
+                <p className="text-white/70">Comapny Portal Login</p>
               </div>
 
               <form onSubmit={handleSubmit} className="space-y-4">

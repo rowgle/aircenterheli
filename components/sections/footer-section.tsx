@@ -106,7 +106,7 @@ export function FooterSection() {
   >
     Disclaimers
   </a>
-  {" "}| Developed by{" "}
+  {" "}| Designed by{" "}
   <a
     href="https://rowgle.com"
     target="_blank"
@@ -126,22 +126,32 @@ export function FooterSection() {
           </div>
 
           {/* Social Links */}
-          <div className="flex items-center gap-4">
-            <Link
-              href="/employees"
-              className="text-xs text-muted-foreground transition-colors hover:text-foreground"
-            >
-              Employees
-            </Link>
-            <Link
-              href="https://www.linkedin.com/company/aircenter"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-xs text-muted-foreground transition-colors hover:text-foreground"
-            >
-              LinkedIn
-            </Link>
-          </div>
+<div className="flex items-center gap-4">
+  <Link
+    href="https://x.com/aircenterheli"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-xs text-muted-foreground transition-colors hover:text-foreground"
+  >
+    X
+  </Link>
+  <Link
+    href="https://www.instagram.com/aircenterhelicopters/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-xs text-muted-foreground transition-colors hover:text-foreground"
+  >
+    Instagram
+  </Link>
+  <Link
+    href="https://www.linkedin.com/company/aircenter"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-xs text-muted-foreground transition-colors hover:text-foreground"
+  >
+    LinkedIn
+  </Link>
+</div>
         </div>
       </div>
     </footer>

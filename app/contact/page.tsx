@@ -2,6 +2,7 @@
 
 import { Header } from "@/components/header";
 import { FooterSection } from "@/components/sections/footer-section";
+import Image from "next/image";
 import { useState } from "react";
 
 export default function ContactPage() {
@@ -26,7 +27,6 @@ export default function ContactPage() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Replace with your Formspree endpoint or API route
     try {
       const response = await fetch("https://formspree.io/f/mgoplzey", {
         method: "POST",
@@ -76,7 +76,6 @@ export default function ContactPage() {
       {/* Contact Content */}
       <div className="max-w-6xl mx-auto px-8 pb-24">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-16">
-          
           {/* Contact Info - Left Side */}
           <div className="lg:col-span-2 space-y-10">
             <div>
@@ -106,8 +105,7 @@ export default function ContactPage() {
                 Phone
               </h3>
               <p className="text-lg">
-                {/* Add your phone number here */}
-                Available upon request
+                817-624-6300
               </p>
             </div>
 
@@ -157,7 +155,6 @@ export default function ContactPage() {
                       placeholder="Your name"
                     />
                   </div>
-
                   <div>
                     <label className="block text-sm font-medium text-black/70 mb-2">
                       Email *
@@ -188,7 +185,6 @@ export default function ContactPage() {
                       placeholder="(555) 000-0000"
                     />
                   </div>
-
                   <div>
                     <label className="block text-sm font-medium text-black/70 mb-2">
                       Company
@@ -255,6 +251,54 @@ export default function ContactPage() {
           </div>
         </div>
       </div>
+
+      {/* Ticker + Image */}
+<div>
+  {/* Premium Ticker */}
+<div className="bg-black py-3.5 overflow-hidden border-y border-white/10">
+  <div className="flex w-max animate-marquee">
+    {/* Content repeated twice */}
+    {[...Array(2)].map((_, i) => (
+      <div
+        key={i}
+        className="flex items-center gap-12 px-8 text-sm md:text-[15px] font-medium tracking-wide shrink-0"
+      >
+        <span className="text-white/90">21× H225 Super Puma Fleet</span>
+        <span className="text-white/30">•</span>
+        <span className="text-emerald-400">99%+ Operational Readiness</span>
+        <span className="text-white/30">•</span>
+        <span className="text-white/90">VERTREP • Personnel Recovery • CASEVAC</span>
+        <span className="text-white/30">•</span>
+        <span className="text-white/90">NASA Commercial Crew Support</span>
+        <span className="text-white/30">•</span>
+        <span className="text-sky-400">CAMTS Special Operations Accredited</span>
+        <span className="text-white/30">•</span>
+        <span className="text-white/90">Worldwide Deployments</span>
+        <span className="text-white/30">•</span>
+        <span className="text-amber-400">Now Hiring: VERTREP SIC Pilots & A&P Mechanics</span>
+        <span className="text-white/30">•</span>
+        <span className="text-white/90">FAA Part 145 Repair Station</span>
+        <span className="text-white/30">•</span>
+        <span className="text-white/90">H225 Level D Full Motion Simulator</span>
+        <span className="text-white/30">•</span>
+        <span className="text-emerald-400">40+ Years of Mission Success</span>
+        <span className="text-white/30">•</span>
+      </div>
+    ))}
+  </div>
+</div>
+
+  {/* Image */}
+  <div className="relative aspect-[16/9] w-full">
+    <Image
+      src="/images/noseshot.jpg"
+      alt="Air Center Helicopters SpaceX Staging"
+      fill
+      className="object-cover"
+    />
+    <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
+  </div>
+</div>
 
       <FooterSection />
     </main>
