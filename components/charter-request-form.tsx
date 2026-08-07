@@ -1,24 +1,32 @@
 "use client"
 
-import { useState } from "react"
+import React, { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { Check, ChevronRight, ChevronLeft, Edit2, X, Plane, MapPin, Calendar, Users, User } from "lucide-react"
+import {
+  Check,
+  ChevronRight,
+  ChevronLeft,
+  Edit2,
+  X,
+  Plane,
+  MapPin,
+  Calendar,
+  User,
+} from "lucide-react"
 
 const tripTypes = ["One Way", "Round Trip", "Multi-Leg"]
+
 const aircraftCategories = [
-  "Light Helicopter",
-  "Medium Helicopter",
-  "Heavy Helicopter",
-  "Light Jet",
-  "Midsize Jet",
-  "Heavy Jet",
-  "Turboprop",
+  "Light Helicopter (AS350 / Bell 206)",
+  "Medium Helicopter (Bell 412)",
+  "Heavy Helicopter (H225 Super Puma)",
   "No Preference",
 ]
+
 const passengerCounts = ["1-2", "3-4", "5-6", "7-9", "10-15", "16+"]
 
 const transitionProps = {
-  type: "spring",
+  type: "spring" as const,
   stiffness: 500,
   damping: 30,
   mass: 0.5,
@@ -166,26 +174,22 @@ interface CharterRequestFormProps {
 }
 
 export default function CharterRequestForm({ isOpen, onClose }: CharterRequestFormProps) {
-  console.log("Modal received isOpen =", isOpen);
-
   const [currentStep, setCurrentStep] = useState(1)
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
-  // Step 1: Trip Type
-  const [tripType, setTripType] = useState<string>("")
-
-  // Step 2: Flight Details
+  // Step 1
+  const [tripType, setTripType] = useState("")
+  // Step 2
   const [departureLocation, setDepartureLocation] = useState("")
   const [arrivalLocation, setArrivalLocation] = useState("")
   const [departureDate, setDepartureDate] = useState("")
   const [departureTime, setDepartureTime] = useState("")
   const [returnDate, setReturnDate] = useState("")
   const [returnTime, setReturnTime] = useState("")
-
-  // Step 3: Passengers & Aircraft
-  const [passengerCount, setPassengerCount] = useState<string>("")
-  const [aircraftPreference, setAircraftPreference] = useState<string>("")
-
-  // Step 4: Contact Info
+  // Step 3
+  const [passengerCount, setPassengerCount] = useState("")
+  const [aircraftPreference, setAircraftPreference] = useState("")
+  // Step 4
   const [fullName, setFullName] = useState("")
   const [email, setEmail] = useState("")
   const [phone, setPhone] = useState("")
@@ -195,38 +199,11 @@ export default function CharterRequestForm({ isOpen, onClose }: CharterRequestFo
   const totalSteps = 5
 
   const handleNext = () => {
-    if (currentStep < totalSteps) {
-      setCurrentStep(currentStep + 1)
-    }
+    if (currentStep < totalSteps) setCurrentStep(currentStep + 1)
   }
 
   const handleBack = () => {
-    if (currentStep > 1) {
-      setCurrentStep(currentStep - 1)
-    }
-  }
-
-  const handleSubmit = () => {
-    const formData = {
-      tripType,
-      departureLocation,
-      arrivalLocation,
-      departureDate,
-      departureTime,
-      returnDate,
-      returnTime,
-      passengerCount,
-      aircraftPreference,
-      fullName,
-      email,
-      phone,
-      company,
-      additionalInfo,
-    }
-    console.log("Charter Request Submitted:", formData)
-    alert("Your charter request has been submitted! We will contact you shortly.")
-    onClose()
-    resetForm()
+    if (currentStep > 1) setCurrentStep(currentStep - 1)
   }
 
   const resetForm = () => {
@@ -247,24 +224,66 @@ export default function CharterRequestForm({ isOpen, onClose }: CharterRequestFo
     setAdditionalInfo("")
   }
 
-  const canProceed = () => {
-    switch (currentStep) {
-      case 1: return tripType !== ""
-      case 2: return departureLocation !== "" && arrivalLocation !== "" && departureDate !== ""
-      case 3: return passengerCount !== ""
-      case 4: return fullName !== "" && email !== "" && phone !== ""
-      case 5: return true
-      default: return false
+  const handleSubmit = async () => {
+    setIsSubmitting(true)
+
+    const formData = {
+      tripType,
+      departureLocation,
+      arrivalLocation,
+      departureDate,
+      departureTime,
+      returnDate,
+      returnTime,
+      passengerCount,
+      aircraftPreference,
+      fullName,
+      email,
+      phone,
+      company,
+      additionalInfo,
+    }
+
+    try {
+      const response = await fetch("https://formspree.io/f/mqpzavaa", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      })
+
+      if (response.ok) {
+        alert("Your charter request has been submitted! We will contact you shortly.")
+        onClose()
+        resetForm()
+      } else {
+        alert("Something went wrong. Please try again or email contact@achi-tx.com")
+      }
+    } catch (error) {
+      console.error(error)
+      alert("Something went wrong. Please try again.")
+    } finally {
+      setIsSubmitting(false)
     }
   }
 
-  const stepTitles = [
-    "Trip Type",
-    "Flight Details",
-    "Passengers",
-    "Contact Info",
-    "Review",
-  ]
+  const canProceed = () => {
+    switch (currentStep) {
+      case 1:
+        return tripType !== ""
+      case 2:
+        return departureLocation !== "" && arrivalLocation !== "" && departureDate !== ""
+      case 3:
+        return passengerCount !== ""
+      case 4:
+        return fullName !== "" && email !== "" && phone !== ""
+      case 5:
+        return true
+      default:
+        return false
+    }
+  }
+
+  const stepTitles = ["Trip Type", "Flight Details", "Passengers", "Contact Info", "Review"]
 
   if (!isOpen) return null
 
@@ -337,7 +356,9 @@ export default function CharterRequestForm({ isOpen, onClose }: CharterRequestFo
                 >
                   {currentStep === 1 && (
                     <div>
-                      <h3 className="text-xl font-semibold text-slate-900 mb-2">What type of trip are you planning?</h3>
+                      <h3 className="text-xl font-semibold text-slate-900 mb-2">
+                        What type of trip are you planning?
+                      </h3>
                       <p className="text-slate-500 text-sm mb-8">Select your trip type to get started</p>
                       <motion.div className="flex flex-wrap gap-3" layout transition={transitionProps}>
                         {tripTypes.map((type) => (
@@ -415,7 +436,9 @@ export default function CharterRequestForm({ isOpen, onClose }: CharterRequestFo
                   {currentStep === 3 && (
                     <div>
                       <h3 className="text-xl font-semibold text-slate-900 mb-2">Passengers & Aircraft</h3>
-                      <p className="text-slate-500 text-sm mb-8">How many passengers and any aircraft preference?</p>
+                      <p className="text-slate-500 text-sm mb-8">
+                        How many passengers and any aircraft preference?
+                      </p>
                       <div className="mb-8">
                         <label className="block text-sm font-medium text-slate-700 mb-3">
                           Number of Passengers <span className="text-red-500">*</span>
@@ -501,7 +524,6 @@ export default function CharterRequestForm({ isOpen, onClose }: CharterRequestFo
                       <h3 className="text-xl font-semibold text-slate-900 mb-2">Review Your Request</h3>
                       <p className="text-slate-500 text-sm mb-8">Please verify all details before submitting</p>
                       <div className="space-y-4">
-                        {/* Trip Details */}
                         <div className="p-4 border border-slate-200 bg-slate-50 rounded-xl">
                           <div className="flex items-center justify-between mb-2">
                             <h4 className="font-medium text-slate-900">Trip Details</h4>
@@ -509,22 +531,26 @@ export default function CharterRequestForm({ isOpen, onClose }: CharterRequestFo
                               onClick={() => setCurrentStep(1)}
                               className="text-zinc-600 hover:text-zinc-800 transition-colors flex items-center gap-1 text-sm"
                             >
-                              <Edit2 className="w-3 h-3" />
-                              Edit
+                              <Edit2 className="w-3 h-3" /> Edit
                             </button>
                           </div>
                           <div className="text-sm text-slate-600 space-y-1">
                             <p><span className="font-medium">Type:</span> {tripType}</p>
                             <p><span className="font-medium">From:</span> {departureLocation}</p>
                             <p><span className="font-medium">To:</span> {arrivalLocation}</p>
-                            <p><span className="font-medium">Date:</span> {departureDate} {departureTime && `at ${departureTime}`}</p>
+                            <p>
+                              <span className="font-medium">Date:</span> {departureDate}
+                              {departureTime && ` at ${departureTime}`}
+                            </p>
                             {tripType === "Round Trip" && returnDate && (
-                              <p><span className="font-medium">Return:</span> {returnDate} {returnTime && `at ${returnTime}`}</p>
+                              <p>
+                                <span className="font-medium">Return:</span> {returnDate}
+                                {returnTime && ` at ${returnTime}`}
+                              </p>
                             )}
                           </div>
                         </div>
 
-                        {/* Passengers & Aircraft */}
                         <div className="p-4 border border-slate-200 bg-slate-50 rounded-xl">
                           <div className="flex items-center justify-between mb-2">
                             <h4 className="font-medium text-slate-900">Passengers & Aircraft</h4>
@@ -532,8 +558,7 @@ export default function CharterRequestForm({ isOpen, onClose }: CharterRequestFo
                               onClick={() => setCurrentStep(3)}
                               className="text-zinc-600 hover:text-zinc-800 transition-colors flex items-center gap-1 text-sm"
                             >
-                              <Edit2 className="w-3 h-3" />
-                              Edit
+                              <Edit2 className="w-3 h-3" /> Edit
                             </button>
                           </div>
                           <div className="text-sm text-slate-600 space-y-1">
@@ -544,7 +569,6 @@ export default function CharterRequestForm({ isOpen, onClose }: CharterRequestFo
                           </div>
                         </div>
 
-                        {/* Contact Information */}
                         <div className="p-4 border border-slate-200 bg-slate-50 rounded-xl">
                           <div className="flex items-center justify-between mb-2">
                             <h4 className="font-medium text-slate-900">Contact Information</h4>
@@ -552,8 +576,7 @@ export default function CharterRequestForm({ isOpen, onClose }: CharterRequestFo
                               onClick={() => setCurrentStep(4)}
                               className="text-zinc-600 hover:text-zinc-800 transition-colors flex items-center gap-1 text-sm"
                             >
-                              <Edit2 className="w-3 h-3" />
-                              Edit
+                              <Edit2 className="w-3 h-3" /> Edit
                             </button>
                           </div>
                           <div className="text-sm text-slate-600 space-y-1">
@@ -561,7 +584,9 @@ export default function CharterRequestForm({ isOpen, onClose }: CharterRequestFo
                             <p><span className="font-medium">Email:</span> {email}</p>
                             <p><span className="font-medium">Phone:</span> {phone}</p>
                             {company && <p><span className="font-medium">Company:</span> {company}</p>}
-                            {additionalInfo && <p><span className="font-medium">Notes:</span> {additionalInfo}</p>}
+                            {additionalInfo && (
+                              <p><span className="font-medium">Notes:</span> {additionalInfo}</p>
+                            )}
                           </div>
                         </div>
                       </div>
@@ -602,10 +627,11 @@ export default function CharterRequestForm({ isOpen, onClose }: CharterRequestFo
               ) : (
                 <button
                   onClick={handleSubmit}
-                  className="flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-medium bg-black text-white hover:bg-zinc-900 transition-all"
+                  disabled={isSubmitting}
+                  className="flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-medium bg-black text-white hover:bg-zinc-900 transition-all disabled:opacity-60"
                 >
-                  Submit Request
-                  <Check className="w-4 h-4" />
+                  {isSubmitting ? "Submitting..." : "Submit Request"}
+                  {!isSubmitting && <Check className="w-4 h-4" />}
                 </button>
               )}
             </div>
