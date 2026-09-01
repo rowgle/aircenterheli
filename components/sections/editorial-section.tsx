@@ -50,7 +50,7 @@ export function EditorialSection() {
           muted
           playsInline
           className="absolute inset-0 h-full w-full object-cover"
-          src="/videos/vertrephighlightvid.mp4"
+          src="/videos/vertrep-highlight-2.mp4"
         />
         <div className="absolute inset-0 bg-black/20" />
       </div>
