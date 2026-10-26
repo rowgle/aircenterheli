@@ -17,7 +17,7 @@ export function EditorialSection() {
             Recent Contract Award
           </p>
           <h3 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-foreground leading-snug">
-            $300M U.S. Navy Contract
+            $300M U.S. NAVY CONTRACT
           </h3>
           <p className="mt-6 text-muted-foreground text-lg max-w-2xl mx-auto">
             Vertical replenishment services for Combat Logistics Force ships supporting Seventh and Fifth Fleet requirements through 2030.

@@ -2,22 +2,23 @@
 
 import Link from "next/link";
 import { FadeImage } from "@/components/fade-image";
+import { HighlightText } from "@/components/highlight-text";
 
 const services = [
   {
-    title: "Expeditionary Airlift",
+    title: "EXPEDITIONARY AIRLIFT",
     description: "Contingency Operations",
     image: "/images/evacuationpolice.jpg",
     href: "/capabilities#airlift",
   },
   {
-    title: "Ship-Based Services",
+    title: "SHIP-BASED SERVICES",
     description: "Vertical Replenishment",
     image: "/images/hookem.jpg",
     href: "/capabilities#ship",
   },
   {
-    title: "Personnel Recovery & SAR",
+    title: "PERSONNEL RECOVERY",
     description: "Search and Rescue",
     image: "/images/rainbowboat.jpg",
     href: "/capabilities#sar",
@@ -29,13 +30,13 @@ const services = [
     href: "/capabilities#medevac",
   },
   {
-    title: "Aircraft Management",
+    title: "AIRCRAFT MANAGEMENT",
     description: "Fleet Operations & Maintenance",
     image: "/images/mechanicsun.jpg",
     href: "/aircraft-management",
   },
   {
-    title: "Technical Training",
+    title: "TECHNICAL TRAINING",
     description: "Pilots & Maintenance",
     image: "/images/simlegs.jpg",
     href: "/capabilities#training",
@@ -48,9 +49,9 @@ export function FeaturedProductsSection() {
       {/* Section Title */}
       <div className="px-6 py-20 text-center md:px-12 md:py-28 lg:px-20 lg:py-32 lg:pb-20">
         <h2 className="text-3xl font-semibold tracking-tight text-foreground md:text-4xl lg:text-5xl">
-          Mission-Ready Capabilities.
+          MISSION-READY CAPABILITIES.
           <br />
-          Proven Performance.
+          <HighlightText>PROVEN PERFORMANCE.</HighlightText>
         </h2>
         <p className="mx-auto mt-6 max-w-md text-sm text-muted-foreground">
           Core Services
@@ -72,7 +73,6 @@ export function FeaturedProductsSection() {
                 />
                 <div className="absolute inset-0 bg-black/10 transition-colors duration-300 group-hover:bg-black/25" />
 
-                {/* Clickable cue — only shows when linked */}
                 {"href" in service && service.href && (
                   <div className="absolute inset-0 flex items-end justify-end p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                     <span className="rounded-full bg-white/95 px-3 py-1.5 text-xs font-medium text-foreground shadow-sm">

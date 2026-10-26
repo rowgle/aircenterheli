@@ -210,7 +210,7 @@ export function TechnologySection() {
                 className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center"
               >
                 <h2 className="max-w-3xl font-semibold leading-tight tracking-tight text-white md:text-5xl lg:text-7xl text-4xl">
-                  {["Excellence", "Through", "Experience."].map((word, index) => {
+                  {["EXCELLENCE", "THROUGH", "EXPERIENCE."].map((word, index) => {
                     // Each word fades out sequentially based on scrollProgress
                     const wordFadeStart = index * 0.07; // Excellence: 0, Through: 0.07, Experience: 0.14
                     const wordFadeEnd = wordFadeStart + 0.07;

@@ -16,19 +16,19 @@ export function TestimonialsSection() {
       <div className="px-6 pb-20 md:px-12 lg:px-20">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-5xl mx-auto">
           <div className="text-center">
-            <h4 className="text-lg font-semibold text-foreground mb-3">Safety</h4>
+            <h4 className="text-lg font-semibold text-foreground mb-3">SAFETY</h4>
             <p className="text-muted-foreground text-sm leading-relaxed">
               Safe transportation of passengers and cargo with accident prevention and injury reduction as primary objectives.
             </p>
           </div>
           <div className="text-center">
-            <h4 className="text-lg font-semibold text-foreground mb-3">Quality</h4>
+            <h4 className="text-lg font-semibold text-foreground mb-3">QUALITY</h4>
             <p className="text-muted-foreground text-sm leading-relaxed">
               Multi-pronged approach patterned on DoD CARB requirements with comprehensive internal audit programs.
             </p>
           </div>
           <div className="text-center">
-            <h4 className="text-lg font-semibold text-foreground mb-3">Risk Management</h4>
+            <h4 className="text-lg font-semibold text-foreground mb-3">RISK MANAGEMENT</h4>
             <p className="text-muted-foreground text-sm leading-relaxed">
               Structured, documented methods for continuous improvement and proactive identification of safety risks.
             </p>

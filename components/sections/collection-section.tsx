@@ -6,42 +6,42 @@ import { Shield, Award, FileCheck, Plane, Flame, CheckCheck, Wrench, Weight, Anc
 const credentials = [
   {
     id: 1,
-    name: "DoD CARB Approved",
+    name: "DoD CARB APPROVED",
     description: "Air Carrier approved since 1991",
     icon: Plane,
     image: "/images/faacred.jpg",
   },
   {
     id: 2,
-    name: "FAA Part 135",
+    name: "FAA PART 135",
     description: "HAA, NVG, IFR & HAZMAT Operations",
     icon: Biohazard,
     image: "/images/galaxyview.jpg",
   },
   {
     id: 3,
-    name: "FAA Part 133",
+    name: "FAA PART 133",
     description: "External Loads A, B, C, D certified",
     icon: Weight,
     image: "/images/slingloadcred.jpg",
   },
   {
     id: 4,
-    name: "FAA Part 137",
+    name: "FAA PART 137",
     description: "Aerial Firefighting certified",
     icon: Flame,
     image: "/images/sunsetglow.jpg",
   },
   {
     id: 5,
-    name: "FAA Part 145 MRO",
+    name: "FAA PART 145 MRO",
     description: "Repair Facility certified",
     icon: Wrench,
     image: "/images/tailrotor.jpg",
   },
   {
     id: 6,
-    name: "Navy DLQ Certified",
+    name: "NAVY DLQ CERTIFIED",
     description: "Day/Night Deck Landing Qualification",
     icon: Anchor,
     image: "/images/decklanding.jpg",
@@ -54,7 +54,7 @@ export function CollectionSection() {
       {/* Section Title */}
       <div className="px-6 py-20 md:px-12 lg:px-20 md:py-10">
         <h2 className="text-3xl font-semibold tracking-tight text-foreground md:text-4xl">
-          Certifications & Credentials
+          CERTIFICATIONS & CREDENTIALS
         </h2>
         <p className="mt-4 text-muted-foreground max-w-2xl">
           ITAR/EAR Compliant. Department of Interior Carded Aircraft & Crews.

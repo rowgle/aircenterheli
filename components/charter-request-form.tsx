@@ -312,7 +312,7 @@ export default function CharterRequestForm({ isOpen, onClose }: CharterRequestFo
                   <Plane className="w-5 h-5 text-zinc-700" />
                 </div>
                 <div>
-                  <h2 className="text-lg font-semibold text-slate-900">Charter Request</h2>
+                  <h2 className="text-lg font-semibold text-slate-900">CHARTER REQUEST</h2>
                   <p className="text-sm text-slate-500">Request a quote for your flight</p>
                 </div>
               </div>
@@ -357,7 +357,7 @@ export default function CharterRequestForm({ isOpen, onClose }: CharterRequestFo
                   {currentStep === 1 && (
                     <div>
                       <h3 className="text-xl font-semibold text-slate-900 mb-2">
-                        What type of trip are you planning?
+                        WHAT TYPE OF TRIP ARE YOU PLANNING?
                       </h3>
                       <p className="text-slate-500 text-sm mb-8">Select your trip type to get started</p>
                       <motion.div className="flex flex-wrap gap-3" layout transition={transitionProps}>
@@ -375,7 +375,7 @@ export default function CharterRequestForm({ isOpen, onClose }: CharterRequestFo
 
                   {currentStep === 2 && (
                     <div>
-                      <h3 className="text-xl font-semibold text-slate-900 mb-2">Flight Details</h3>
+                      <h3 className="text-xl font-semibold text-slate-900 mb-2">FLIGHT DETAILS</h3>
                       <p className="text-slate-500 text-sm mb-8">Tell us about your departure and arrival</p>
                       <div className="space-y-4">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -435,7 +435,7 @@ export default function CharterRequestForm({ isOpen, onClose }: CharterRequestFo
 
                   {currentStep === 3 && (
                     <div>
-                      <h3 className="text-xl font-semibold text-slate-900 mb-2">Passengers & Aircraft</h3>
+                      <h3 className="text-xl font-semibold text-slate-900 mb-2">PASSENGERS & AIRCRAFT</h3>
                       <p className="text-slate-500 text-sm mb-8">
                         How many passengers and any aircraft preference?
                       </p>
@@ -474,7 +474,7 @@ export default function CharterRequestForm({ isOpen, onClose }: CharterRequestFo
 
                   {currentStep === 4 && (
                     <div>
-                      <h3 className="text-xl font-semibold text-slate-900 mb-2">Contact Information</h3>
+                      <h3 className="text-xl font-semibold text-slate-900 mb-2">CONTACT INFORMATION</h3>
                       <p className="text-slate-500 text-sm mb-8">How can we reach you with your quote?</p>
                       <div className="space-y-4">
                         <InputField
@@ -521,12 +521,12 @@ export default function CharterRequestForm({ isOpen, onClose }: CharterRequestFo
 
                   {currentStep === 5 && (
                     <div>
-                      <h3 className="text-xl font-semibold text-slate-900 mb-2">Review Your Request</h3>
+                      <h3 className="text-xl font-semibold text-slate-900 mb-2">REVIEW YOUR REQUEST</h3>
                       <p className="text-slate-500 text-sm mb-8">Please verify all details before submitting</p>
                       <div className="space-y-4">
                         <div className="p-4 border border-slate-200 bg-slate-50 rounded-xl">
                           <div className="flex items-center justify-between mb-2">
-                            <h4 className="font-medium text-slate-900">Trip Details</h4>
+                            <h4 className="font-medium text-slate-900">TRIP DETAILS</h4>
                             <button
                               onClick={() => setCurrentStep(1)}
                               className="text-zinc-600 hover:text-zinc-800 transition-colors flex items-center gap-1 text-sm"
@@ -553,7 +553,7 @@ export default function CharterRequestForm({ isOpen, onClose }: CharterRequestFo
 
                         <div className="p-4 border border-slate-200 bg-slate-50 rounded-xl">
                           <div className="flex items-center justify-between mb-2">
-                            <h4 className="font-medium text-slate-900">Passengers & Aircraft</h4>
+                            <h4 className="font-medium text-slate-900">PASSENGERS & AIRCRAFT</h4>
                             <button
                               onClick={() => setCurrentStep(3)}
                               className="text-zinc-600 hover:text-zinc-800 transition-colors flex items-center gap-1 text-sm"
@@ -571,7 +571,7 @@ export default function CharterRequestForm({ isOpen, onClose }: CharterRequestFo
 
                         <div className="p-4 border border-slate-200 bg-slate-50 rounded-xl">
                           <div className="flex items-center justify-between mb-2">
-                            <h4 className="font-medium text-slate-900">Contact Information</h4>
+                            <h4 className="font-medium text-slate-900">CONTACT INFORMATION</h4>
                             <button
                               onClick={() => setCurrentStep(4)}
                               className="text-zinc-600 hover:text-zinc-800 transition-colors flex items-center gap-1 text-sm"

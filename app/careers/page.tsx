@@ -15,49 +15,92 @@ export default function CareersPage() {
   const [lightboxImage, setLightboxImage] = useState<{ src: string; alt: string } | null>(null);
 
   const positions = [
-    {
-      id: "ap-mechanic",
-      title: "A&P Mechanic (Part 145)",
-      location: "Burleson, TX (Spinks Airport)",
-      type: "Full-Time",
-      department: "Maintenance",
-      experience: "2+ years recent helicopter experience",
-      description:
-        "Air Center Helicopters is accepting resumes for licensed A&P Helicopter Mechanics to fill immediate openings at the Burleson, Texas location. Ideal candidates will have 2yrs recent helicopter experience, FAR Part 135/Part 145 experience preferred. Airbus AS350, EC225/AS332, Bell 206, 212/412 experience is a plus. Relocation assistance available for the right candidates. Preference will be given to applicants with verifiable Sheet Metal experience. Part 135 positions will require travel up to 50% of the time.",
-      requirements: [
-        "Candidates must hold an A&P License",
-        "Candidates must be US citizens",
-        "FAA Part 135/145 experience preferred",
-        "Must be familiar with FAA Regulations and Standards",
-        "Must be able to multi task and handle a fast paced environment",
-        "Must be able to travel at short notice",
-        "Maintenance and Modification experience",
-        "Avionics installation experience",
-        "Sheet metal experience",
-      ],
-    },
-    {
-      id: "PIC",
-      title: "VertRep SIC Pilot (H225)",
-      location: "Fort Worth, TX + Worldwide Deployments",
-      type: "Full-Time",
-      department: "Flight Operations",
-      experience: "1,500 Helicopter Flight Hours",
-      description:
-        "As an H225 Vertical Replenishment Second in Command pilot, you'll be joining an elite group of aviators providing global airlift support services to the U.S. Navy and the Department of Defense supporting their Combat Logistics Force ships that are deployed worldwide. In this position, you'll be instrumental in upholding Air Center's reputation for operational and performance excellence while maintaining unparalleled safety and operational readiness. Rotational Schedule is 45 days on/45 days off.",
-      requirements: [
-        "1,500 Helicopter flight hours",
-        "100 hrs flight time within the past 12 months",
-        "Current FAA Class II Medical Certificate",
-        "Must be able to obtain/maintain DOD Secret Clearance",
-        "External load experience",
-        "Night flying experience (NVG)",
-        "Experience with Offshore Operations, Shipboard, VERTREP or other Navy Operations",
-        "Type-certificated with multi-engine aircraft H225 (similar size) flying with a two-pilot (PIC/SIC) operation",
-        "Must be a US Citizen",
-      ],
-    },
-  ];
+  {
+    id: "ap-mechanic",
+    title: "A&P MECHANIC",
+    location: "Burleson, TX (Spinks Airport)",
+    type: "Full-Time",
+    department: "Maintenance",
+    experience: "2+ years recent helicopter experience",
+    description:
+      "Air Center Helicopters is accepting resumes for licensed A&P Helicopter Mechanics to fill immediate openings at the Burleson, Texas location. Ideal candidates will have 2yrs recent helicopter experience, FAR Part 135/Part 145 experience preferred. Airbus AS350, EC225/AS332, Bell 206, 212/412 experience is a plus. Relocation assistance available for the right candidates. Preference will be given to applicants with verifiable Sheet Metal experience. Part 135 positions will require travel up to 50% of the time.",
+    requirements: [
+      "Candidates must hold an A&P License",
+      "Candidates must be US citizens",
+      "FAA Part 135/145 experience preferred",
+      "Must be familiar with FAA Regulations and Standards",
+      "Must be able to multi task and handle a fast paced environment",
+      "Must be able to travel at short notice",
+      "Maintenance and Modification experience",
+      "Avionics installation experience",
+      "Sheet metal experience",
+    ],
+  },
+  {
+    id: "PIC",
+    title: "SIC PILOT",
+    location: "Fort Worth, TX + Worldwide Deployments",
+    type: "Full-Time",
+    department: "Flight Operations",
+    experience: "1,500 Helicopter Flight Hours",
+    description:
+      "As an H225 Vertical Replenishment Second in Command pilot, you'll be joining an elite group of aviators providing global airlift support services to the U.S. Navy and the Department of Defense supporting their Combat Logistics Force ships that are deployed worldwide. In this position, you'll be instrumental in upholding Air Center's reputation for operational and performance excellence while maintaining unparalleled safety and operational readiness. Rotational Schedule is 45 days on/45 days off.",
+    requirements: [
+      "1,500 Helicopter flight hours",
+      "100 hrs flight time within the past 12 months",
+      "Current FAA Class II Medical Certificate",
+      "Must be able to obtain/maintain DOD Secret Clearance",
+      "External load experience",
+      "Night flying experience (NVG)",
+      "Experience with Offshore Operations, Shipboard, VERTREP or other Navy Operations",
+      "Type-certificated with multi-engine aircraft H225 (similar size) flying with a two-pilot (PIC/SIC) operation",
+      "Must be a US Citizen",
+    ],
+  },
+  {
+    id: "sic-pilot-contingent",
+    title: "SIC PILOT",
+    note: "Contingent on Contract Award",
+    location: "Fort Worth, TX + Worldwide Deployments",
+    type: "Full-Time",
+    department: "Flight Operations",
+    experience: "1,500 Helicopter Flight Hours",
+    description:
+      "Air Center Helicopters is accepting resumes for Second in Command pilots. This position is contingent on contract award. Ideal candidates will have recent multi-engine helicopter experience and be prepared to support expeditionary and global operations. Rotational schedules and specific mission profiles will be determined based on the awarded contract.",
+    requirements: [
+      "1,500 Helicopter flight hours",
+      "100 hrs flight time within the past 12 months",
+      "Current FAA Class II Medical Certificate",
+      "Must be able to obtain/maintain DOD Secret Clearance",
+      "External load experience",
+      "Night flying experience (NVG)",
+      "Type-certificated with multi-engine aircraft (similar size) flying with a two-pilot (PIC/SIC) operation",
+      "Must be a US Citizen",
+    ],
+  },
+  {
+    id: "ap-mechanic-contingent",
+    title: "A&P MECHANIC",
+    note: "Contingent on Contract Award",
+    location: "Burleson, TX (Spinks Airport) + Possible Deployments",
+    type: "Full-Time",
+    department: "Maintenance",
+    experience: "2+ years recent helicopter experience",
+    description:
+      "Air Center Helicopters is accepting resumes for licensed A&P Helicopter Mechanics. This position is contingent on contract award. Ideal candidates will have recent helicopter experience, with FAR Part 135/Part 145 experience preferred. Airbus AS350, EC225/AS332, Bell 206, 212/412 experience is a plus. Specific locations and travel requirements will be determined based on the awarded contract.",
+    requirements: [
+      "Candidates must hold an A&P License",
+      "Candidates must be US citizens",
+      "FAA Part 135/145 experience preferred",
+      "Must be familiar with FAA Regulations and Standards",
+      "Must be able to multi task and handle a fast paced environment",
+      "Must be able to travel at short notice",
+      "Maintenance and Modification experience",
+      "Avionics installation experience",
+      "Sheet metal experience",
+    ],
+  },
+];
 
   const filteredPositions =
     filter === "All"
@@ -162,8 +205,13 @@ export default function CareersPage() {
                 <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
                   <div>
                     <h3 className="text-2xl md:text-3xl font-semibold">
-                      {pos.title}
-                    </h3>
+  {pos.title}
+  {pos.note && (
+    <span className="ml-2 text-xs font-normal font-sans text-red-800">
+      ({pos.note})
+    </span>
+  )}
+</h3>
                     <p className="text-gray-600 mt-2">
                       {pos.location} • {pos.type}
                     </p>
@@ -532,9 +580,21 @@ export default function CareersPage() {
       )}
 
       {/* Equal Opportunity Note */}
-      <div className="py-8 bg-white text-center text-sm text-gray-500">
-        Air Center Helicopters is an Equal Opportunity Employer.
-      </div>
+<div className="py-8 px-6 bg-white text-center text-sm text-gray-500">
+  <p className="mx-auto max-w-2xl leading-relaxed">
+    Air Center Helicopters, Inc. is an Equal Opportunity Employer. All qualified applicants will receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, disability, or protected veteran status.
+  </p>
+  <p className="mt-2">
+    <a
+      href="https://www.dol.gov/agencies/ofccp/posters"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="underline hover:text-gray-700"
+    >
+      View the EEO is the Law poster
+    </a>
+  </p>
+</div>
 
       {/* Employee Gallery */}
 <section className="w-full py-12 bg-white">

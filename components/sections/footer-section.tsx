@@ -1,26 +1,25 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 
 const footerLinks = {
   services: [
-    { label: "Expeditionary Airlift", href: "#services" },
-    { label: "Ship-Based Services", href: "#capabilities" },
-    { label: "Personnel Recovery", href: "#capabilities" },
-    { label: "Technical Training", href: "#capabilities" },
+    { label: "Capabilities", href: "/capabilities" },
+    { label: "Aircraft Management", href: "/aircraft-management" },
+    { label: "Technical Training", href: "/capabilities#training" },
   ],
   company: [
-    { label: "About Us", href: "#about" },
-    { label: "Credentials", href: "#credentials" },
-    { label: "Fleet", href: "#fleet" },
+    { label: "About", href: "/#about" },
+    { label: "Fleet", href: "/#fleet" },
     { label: "Careers", href: "/careers" },
+    { label: "Contact", href: "/contact" },
   ],
-  contact: [
-  { label: "Headquarters", href: "#" },
-  { label: "Spinks Airport", href: "#" },
-  { label: "Burleson, TX", href: "#" },
-  { label: "Contact Us", href: "/contact" },
-],
+  legal: [
+    { label: "Disclaimers", href: "/disclaimers" },
+    { label: "Supplier Code of Conduct", href: "/supplier-code-of-conduct" },
+    { label: "Export Control", href: "/export-control" },
+  ],
 };
 
 export function FooterSection() {
@@ -31,8 +30,14 @@ export function FooterSection() {
         <div className="grid grid-cols-2 gap-12 md:grid-cols-4 lg:grid-cols-5">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1 lg:col-span-2">
-            <Link href="/" className="text-lg font-semibold text-foreground">
-              AIR CENTER HELICOPTERS, INC.
+            <Link href="/">
+              <Image
+                src="/images/usa-achi-logo.png"
+                alt="Air Center Helicopters"
+                width={280}
+                height={80}
+                className="h-auto w-full max-w-[200px] object-contain"
+              />
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
               Over 40 years of aviation support excellence. U.S. owned and operated helicopter services for government, defense, and commercial customers worldwide.
@@ -44,7 +49,7 @@ export function FooterSection() {
 
           {/* Services */}
           <div>
-            <h4 className="mb-4 text-sm font-semibold text-foreground">Services</h4>
+            <h4 className="mb-4 text-sm font-semibold text-foreground">SERVICES</h4>
             <ul className="space-y-3">
               {footerLinks.services.map((link) => (
                 <li key={link.label}>
@@ -61,7 +66,7 @@ export function FooterSection() {
 
           {/* Company */}
           <div>
-            <h4 className="mb-4 text-sm font-semibold text-foreground">Company</h4>
+            <h4 className="mb-4 text-sm font-semibold text-foreground">COMPANY</h4>
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.label}>
@@ -76,11 +81,11 @@ export function FooterSection() {
             </ul>
           </div>
 
-          {/* Contact */}
+          {/* Legal */}
           <div>
-            <h4 className="mb-4 text-sm font-semibold text-foreground">Contact</h4>
+            <h4 className="mb-4 text-sm font-semibold text-foreground">LEGAL</h4>
             <ul className="space-y-3">
-              {footerLinks.contact.map((link) => (
+              {footerLinks.legal.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
@@ -99,59 +104,51 @@ export function FooterSection() {
       <div className="border-t border-border px-6 py-6 md:px-12 lg:px-20">
         <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
           <p className="text-xs text-muted-foreground">
-  2026 Air Center Helicopters. All rights reserved. |{" "}
-  <a
-    href="/disclaimers"
-    className="hover:text-foreground transition-colors"
-  >
-    Disclaimers
-  </a>
-  {" "}| Designed by{" "}
-  <a
-    href="https://rowgle.com"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="text-muted-foreground hover:text-[#ff6600] transition-colors"
-  >
-    Rowgle
-  </a>
-</p>
+            © 2026 Air Center Helicopters. All rights reserved. | Designed by{" "}
+            <a
+              href="https://rowgle.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[#ff6600] transition-colors"
+            >
+              Rowgle
+            </a>
+          </p>
 
-          <div className="flex items-center gap-2 text-xs text-muted-foreground">
+          <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-xs text-muted-foreground">
             <span>Fly America Act</span>
-            <span>|</span>
+            <span className="text-muted-foreground/40">|</span>
             <span>Buy American Act</span>
-            <span>|</span>
+            <span className="text-muted-foreground/40">|</span>
             <span>ITAR/EAR Compliant</span>
           </div>
 
-          {/* Social Links */}
-<div className="flex items-center gap-4">
-  <Link
-    href="https://x.com/aircenterheli"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="text-xs text-muted-foreground transition-colors hover:text-foreground"
-  >
-    X
-  </Link>
-  <Link
-    href="https://www.instagram.com/aircenterhelicopters/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="text-xs text-muted-foreground transition-colors hover:text-foreground"
-  >
-    Instagram
-  </Link>
-  <Link
-    href="https://www.linkedin.com/company/aircenter"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="text-xs text-muted-foreground transition-colors hover:text-foreground"
-  >
-    LinkedIn
-  </Link>
-</div>
+          <div className="flex items-center gap-4">
+            <Link
+              href="https://x.com/aircenterheli"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs text-muted-foreground transition-colors hover:text-foreground"
+            >
+              X
+            </Link>
+            <Link
+              href="https://www.instagram.com/aircenterhelicopters/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs text-muted-foreground transition-colors hover:text-foreground"
+            >
+              Instagram
+            </Link>
+            <Link
+              href="https://www.linkedin.com/company/aircenter"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs text-muted-foreground transition-colors hover:text-foreground"
+            >
+              LinkedIn
+            </Link>
+          </div>
         </div>
       </div>
     </footer>

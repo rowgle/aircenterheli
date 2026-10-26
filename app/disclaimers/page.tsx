@@ -1,28 +1,52 @@
 "use client";
 
-import { Header } from "@/components/header";
 import { FooterSection } from "@/components/sections/footer-section";
+import { HighlightText } from "@/components/highlight-text";
 
 export default function DisclaimersPage() {
   return (
     <main className="min-h-screen bg-white text-black">
-      <Header />
+      {/* Back to Home */}
+      <div className="pt-8 px-8">
+        <div className="max-w-4xl mx-auto">
+          <a
+            href="/"
+            className="inline-flex items-center gap-2 text-sm text-black/60 hover:text-black transition-colors"
+          >
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              className="shrink-0"
+            >
+              <path
+                d="M10 3L5 8L10 13"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+            HOME
+          </a>
+        </div>
+      </div>
 
       {/* Page Title */}
-      <div className="pt-32 pb-16">
+      <div className="pt-12 pb-16">
         <div className="max-w-4xl mx-auto px-8 text-center">
           <p className="text-black/60 text-sm md:text-base uppercase tracking-[0.3em] mb-4">
             AIR CENTER HELICOPTERS
           </p>
           <h1 className="text-5xl md:text-6xl font-semibold tracking-tight">
-            DISCLAIMERS
+            <HighlightText>DISCLAIMERS</HighlightText>
           </h1>
         </div>
       </div>
 
       {/* Content */}
       <div className="max-w-4xl mx-auto px-8 pb-24">
-        
         {/* Privacy Policy */}
         <section className="mb-20">
           <h2 className="text-2xl md:text-3xl font-semibold mb-8">
@@ -41,23 +65,24 @@ export default function DisclaimersPage() {
               We may collect personal information that you voluntarily provide to us, including but not limited to:
             </p>
             <ul className="list-disc pl-6 space-y-2">
-              <li>Name, email address, phone number, and company name</li>
-              <li>Information submitted through contact or charter request forms</li>
+              <li>Name, email address, phone number, and company or organization name</li>
+              <li>Information submitted through contact, charter, or service request forms</li>
               <li>Résumés and application materials submitted through our careers page</li>
               <li>Any other information you choose to provide</li>
             </ul>
+            <p>
+              We may also automatically collect limited technical information such as IP address, browser type, device type, referring URL, and pages visited. This information is used for site operation, security, and basic analytics.
+            </p>
 
             <h3 className="text-lg font-semibold text-black mt-10 mb-3">
               How We Use Your Information
             </h3>
-            <p>
-              We use the information we collect to:
-            </p>
+            <p>We use the information we collect to:</p>
             <ul className="list-disc pl-6 space-y-2">
               <li>Respond to inquiries and service requests</li>
               <li>Process employment applications</li>
               <li>Provide requested information about our services</li>
-              <li>Improve our website and communications</li>
+              <li>Operate, secure, and improve our website</li>
               <li>Comply with legal and regulatory obligations</li>
             </ul>
 
@@ -65,7 +90,21 @@ export default function DisclaimersPage() {
               Information Sharing
             </h3>
             <p>
-              We do not sell your personal information. We may share information with trusted service providers who assist us in operating our website or conducting business, or when required by law.
+              We do not sell your personal information. We may share information with trusted service providers who assist us in operating our website or conducting business (such as hosting, form processing, or email delivery), or when required by law or to protect the rights and safety of ACHI and others.
+            </p>
+
+            <h3 className="text-lg font-semibold text-black mt-10 mb-3">
+              Cookies and Similar Technologies
+            </h3>
+            <p>
+              This website may use cookies and similar technologies that are necessary for basic site function, security, and understanding general usage. We do not use advertising or cross-context behavioral tracking cookies. You can control cookies through your browser settings. Blocking certain cookies may affect site functionality.
+            </p>
+
+            <h3 className="text-lg font-semibold text-black mt-10 mb-3">
+              Form Submissions
+            </h3>
+            <p>
+              By submitting a form on this website, you consent to ACHI using the information you provide to respond to your inquiry or process your application, as described in this Privacy Policy.
             </p>
 
             <h3 className="text-lg font-semibold text-black mt-10 mb-3">
@@ -91,7 +130,7 @@ export default function DisclaimersPage() {
         <div className="border-t border-gray-200 my-16"></div>
 
         {/* Terms of Use */}
-        <section>
+        <section className="mb-20">
           <h2 className="text-2xl md:text-3xl font-semibold mb-8">
             Terms of Use
           </h2>
@@ -105,7 +144,7 @@ export default function DisclaimersPage() {
               Use of Website
             </h3>
             <p>
-              This website is provided for informational purposes. Content on this site is subject to change without notice. While we strive to keep information accurate and up to date, we make no warranties regarding the completeness or accuracy of the content.
+              This website is provided for informational purposes. Content on this site is subject to change without notice. While we strive to keep information accurate and up to date, we make no warranties regarding the completeness or accuracy of the content. Nothing on this site constitutes an offer to enter into a contract, a guarantee of service availability, or professional, legal, or regulatory advice.
             </p>
 
             <h3 className="text-lg font-semibold text-black mt-10 mb-3">
@@ -155,9 +194,48 @@ export default function DisclaimersPage() {
           </div>
         </section>
 
+        {/* Divider */}
+        <div className="border-t border-gray-200 my-16"></div>
+
+        {/* Additional Notices */}
+        <section>
+          <h2 className="text-2xl md:text-3xl font-semibold mb-8">
+            Additional Notices
+          </h2>
+
+          <div className="space-y-6 text-black/80 leading-relaxed">
+            <h3 className="text-lg font-semibold text-black mt-2 mb-3">
+              Export Control
+            </h3>
+            <p>
+              Certain technical data and services related to ACHI operations may be controlled under the International Traffic in Arms Regulations (ITAR) or the Export Administration Regulations (EAR). No controlled technical data is intentionally published on this website. For more information, see our{" "}
+              <a href="/export-control" className="underline hover:text-black">
+                Export Control notice
+              </a>.
+            </p>
+
+            <h3 className="text-lg font-semibold text-black mt-10 mb-3">
+              Supplier Standards
+            </h3>
+            <p>
+              ACHI maintains a Supplier Code of Conduct that is published on this website and referenced on purchase orders. Suppliers and subcontractors are expected to comply. See our{" "}
+              <a href="/supplier-code-of-conduct" className="underline hover:text-black">
+                Supplier Code of Conduct
+              </a>.
+            </p>
+
+            <h3 className="text-lg font-semibold text-black mt-10 mb-3">
+              No Controlled or Classified Information
+            </h3>
+            <p>
+              Do not submit classified information, controlled unclassified information, or export-controlled technical data through any form or email address on this website. Use only authorized channels for such information.
+            </p>
+          </div>
+        </section>
+
         {/* Last Updated */}
         <p className="mt-16 text-sm text-black/50">
-          Last updated: August 2026
+          Last updated: October 2026
         </p>
       </div>
 

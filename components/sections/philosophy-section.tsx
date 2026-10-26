@@ -66,7 +66,7 @@ export function PhilosophySection() {
               style={{ opacity: titleOpacity }}
             >
               <h2 className="text-[10vw] font-semibold leading-[0.95] tracking-tighter text-foreground md:text-[8vw] lg:text-[6vw] text-center px-6">
-                Global Airlift Support
+                GLOBAL AIRLIFT SUPPORT
               </h2>
             </div>
 

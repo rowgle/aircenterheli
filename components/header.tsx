@@ -31,7 +31,7 @@ export function Header({ onCharterRequest }: HeaderProps) {
 
   return (
     <header
-      className={`fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-4xl transition-all duration-300 ${
+      className={`fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[96%] max-w-7xl transition-all duration-300 ${
         isScrolled ? "bg-background/80 backdrop-blur-md rounded-full" : "bg-transparent"
       }`}
       style={{
@@ -42,18 +42,18 @@ export function Header({ onCharterRequest }: HeaderProps) {
     >
       <div className="flex items-center justify-between transition-all duration-300 px-2 pl-4 py-2">
         {/* Logo */}
-<Link href="/" className="flex items-center">
-  <Image
-    src="/images/logoblack.png"
-    alt="Air Center Helicopters"
-    width={180}
-    height={60}
-    className={`h-12 w-auto transition-all duration-300 ${isScrolled ? "" : "brightness-0 invert"}`}
-  />
-</Link>
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/images/logoblack.png"
+            alt="Air Center Helicopters"
+            width={240}
+            height={80}
+            className={`h-16 w-auto transition-all duration-300 ${isScrolled ? "" : "brightness-0 invert"}`}
+          />
+        </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="hidden items-center gap-12 md:flex">
           <Link
             href="#services"
             className={`text-sm transition-colors ${
@@ -95,20 +95,20 @@ export function Header({ onCharterRequest }: HeaderProps) {
             About
           </Link>
           <Link
-  href="/careers"
-  className={`text-sm transition-colors ${
-    isScrolled ? "text-muted-foreground hover:text-foreground" : "text-white/70 hover:text-white"
-  }`}
->
-  Careers
-</Link>
+            href="/careers"
+            className={`text-sm transition-colors ${
+              isScrolled ? "text-muted-foreground hover:text-foreground" : "text-white/70 hover:text-white"
+            }`}
+          >
+            Careers
+          </Link>
         </nav>
 
         {/* CTA Button */}
         <div className="hidden items-center gap-6 md:flex">
           <button
             onClick={handleCharterClick}
-            className={`px-4 py-2 text-sm font-medium transition-all rounded-full ${
+            className={`px-4 py-2 text-sm font-heading font-black transition-all rounded-full ${
               isScrolled
                 ? "bg-foreground text-background hover:opacity-80"
                 : "bg-white text-foreground hover:bg-white/90"
@@ -149,13 +149,13 @@ export function Header({ onCharterRequest }: HeaderProps) {
               About
             </Link>
             <Link href="/careers" className="text-lg text-foreground" onClick={() => setIsMenuOpen(false)}>
-  Careers
-</Link>
+              Careers
+            </Link>
 
             {/* Mobile Charter Request Button */}
             <button
               onClick={handleCharterClick}
-              className="mt-4 bg-foreground px-5 py-3 text-center text-sm font-medium text-background rounded-full"
+              className="mt-4 bg-foreground px-5 py-3 text-center text-sm font-heading font-black text-background rounded-full"
             >
               CHARTER REQUEST
             </button>

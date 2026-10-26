@@ -1,5 +1,6 @@
 "use client";
 
+import { HighlightText } from "@/components/highlight-text";
 import { FormEvent, useState } from "react";
 import {
   ClipboardCheck,
@@ -306,59 +307,55 @@ export default function AircraftManagementPage() {
 
       <Header onCharterRequest={() => setIsCharterModalOpen(true)} />
 
-      <section className="relative min-h-[78vh] overflow-hidden">
-        <img
-          src={photos.hero}
-          alt="Air Center Helicopters maintenance team on the line"
-          className="absolute inset-0 h-full w-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/50 to-black/25" />
-        <div className="relative z-10 mx-auto flex min-h-[78vh] max-w-6xl flex-col justify-end px-6 pb-20 pt-36 md:px-12 lg:px-16">
-          <p className="mb-4 text-xs uppercase tracking-[0.32em] text-white/70">
-            Fleet Operations & Maintenance
-          </p>
-          <h1 className="max-w-3xl text-4xl font-semibold tracking-tight text-white md:text-6xl lg:text-7xl">
-            Aircraft Management
-          </h1>
-          <p className="mt-6 max-w-xl text-base leading-relaxed text-white/80 md:text-lg">
-            Owning a helicopter is a major investment with considerable
-            responsibility. We take operational control, Part 145 maintenance,
-            and the administrative burden — so you keep the flexibility,
-            convenience, and reliability.
-          </p>
-          <div className="mt-8 flex flex-wrap items-center gap-3">
-            <a
-              href="#request"
-              className="inline-flex min-h-11 items-center rounded-full bg-white px-6 py-3 text-sm font-medium text-[var(--am-fg)] hover:bg-white/90"
-            >
-              Contact Us
-            </a>
-            <a
-              href="#operations"
-              className="inline-flex min-h-11 items-center rounded-full border border-white/30 px-6 py-3 text-sm font-medium text-white hover:bg-white/10"
-            >
-              How it Works
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <nav
-        aria-label="On this page"
-        className="border-b border-[var(--am-border)] bg-[var(--am-bg)]"
+      {/* Hero */}
+<section className="relative min-h-[92vh] overflow-hidden">
+  <img
+    src={photos.hero}
+    alt="Air Center Helicopters maintenance team on the line"
+    className="absolute inset-0 h-full w-full object-cover"
+  />
+  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20" />
+  <div className="relative z-10 mx-auto flex min-h-[92vh] max-w-6xl flex-col justify-end px-6 pb-16 pt-36 md:px-12 lg:px-16">
+    <p className="mb-5 text-xs uppercase tracking-[0.35em] text-white/60">
+      Fleet Operations & Maintenance
+    </p>
+    <h1 className="max-w-4xl text-5xl font-semibold tracking-tight text-white md:text-7xl lg:text-8xl">
+      <HighlightText>AIRCRAFT MANAGEMENT</HighlightText>
+    </h1>
+    <p className="mt-6 max-w-lg text-base leading-relaxed text-white/75 md:text-lg">
+      Owning a helicopter is a major investment with considerable
+      responsibility. We take operational control, Part 145 maintenance,
+      and the administrative burden — so you keep the flexibility,
+      convenience, and reliability.
+    </p>
+    <div className="mt-10">
+      <a
+        href="#request"
+        className="inline-flex min-h-11 items-center rounded-full bg-white px-7 py-3 text-sm font-medium text-black hover:bg-white/90"
       >
-        <div className="mx-auto flex max-w-6xl gap-1 overflow-x-auto px-6 py-3 md:px-12 lg:px-16">
-          {jumps.map((j) => (
-            <a
-              key={j.href}
-              href={j.href}
-              className="shrink-0 rounded-full px-4 py-2 text-sm text-[var(--am-muted)] transition-colors hover:bg-[var(--am-subtle)] hover:text-[var(--am-fg)]"
-            >
-              {j.label}
-            </a>
-          ))}
-        </div>
-      </nav>
+        Contact Us
+      </a>
+    </div>
+  </div>
+</section>
+
+{/* Jump nav */}
+<nav
+  aria-label="On this page"
+  className="sticky top-0 z-40 bg-black"
+>
+  <div className="mx-auto flex max-w-6xl items-center justify-center gap-8 overflow-x-auto px-6 py-4 md:px-12 lg:px-16">
+    {jumps.map((j) => (
+      <a
+        key={j.href}
+        href={j.href}
+        className="shrink-0 text-sm font-medium tracking-wide text-white/70 transition-colors hover:text-white"
+      >
+        {j.label}
+      </a>
+    ))}
+  </div>
+</nav>
 
       <section id="overview" className="scroll-mt-28 px-6 py-20 md:px-12 md:py-28 lg:px-20">
         <div className="mx-auto max-w-3xl text-center">
@@ -366,7 +363,7 @@ export default function AircraftManagementPage() {
             Why Air Center
           </p>
           <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-4xl">
-            Your Helicopter. Our Flight Department.
+            YOUR HELICOPTER. OUR FLIGHT DEPARTMENT.
           </h2>
           <p className="mt-6 text-lg leading-relaxed text-[var(--am-muted)]">
             With over 40 years of operational excellence, Air Center Helicopters
@@ -748,11 +745,11 @@ export default function AircraftManagementPage() {
               </a>
             </p>
             <a
-              href="/"
-              className="mt-8 inline-flex text-sm text-[var(--am-muted)] hover:text-[var(--am-fg)]"
-            >
-              ← Back to capabilities
-            </a>
+  href="/capabilities"
+  className="mt-8 inline-flex text-sm text-[var(--am-muted)] hover:text-[var(--am-fg)]"
+>
+  ← Back to capabilities
+</a>
           </div>
           <div className="lg:col-span-3">
             {done ? (

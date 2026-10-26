@@ -1,5 +1,6 @@
 "use client";
 
+import { HighlightText } from "@/components/highlight-text";
 import { FormEvent, useState } from "react";
 import {
   Crosshair,
@@ -21,7 +22,7 @@ const IMG =
   "https://raw.githubusercontent.com/rowgle/aircenterheli/main/public/images";
 
 const photos = {
-  hero: "/images/crewrecovery.jpg",
+  hero: "/images/missileshot.jpg",
   airlift: "/images/evacuationpolice.jpg",
   ship: "/images/loaddrop.jpg",
   sar: "/images/swimteam.jpg",
@@ -236,60 +237,53 @@ export default function CapabilitiesPage() {
       <Header onCharterRequest={() => setIsCharterModalOpen(true)} />
 
       {/* Hero */}
-      <section className="relative min-h-[78vh] overflow-hidden">
-        <img
-          src={photos.hero}
-          alt="Air Center Helicopters expeditionary operations"
-          className="absolute inset-0 h-full w-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/50 to-black/25" />
-        <div className="relative z-10 mx-auto flex min-h-[78vh] max-w-6xl flex-col justify-end px-6 pb-20 pt-36 md:px-12 lg:px-16">
-          <p className="mb-4 text-xs uppercase tracking-[0.32em] text-white/70">
-            Core Services
-          </p>
-          <h1 className="max-w-3xl text-4xl font-semibold tracking-tight text-white md:text-6xl lg:text-7xl">
-            Mission-Ready Capabilities
-          </h1>
-          <p className="mt-6 max-w-xl text-base leading-relaxed text-white/80 md:text-lg">
-            Expeditionary airlift, ship-based VERTREP, personnel recovery,
-            MEDEVAC, and technical training — delivered under the same
-            standards we fly for DoD, special operations, and commercial
-            partners worldwide.
-          </p>
-          <div className="mt-8 flex flex-wrap items-center gap-3">
-            <a
-              href="#request"
-              className="inline-flex min-h-11 items-center rounded-full bg-white px-6 py-3 text-sm font-medium text-[var(--am-fg)] hover:bg-white/90"
-            >
-              Request Capabilities Brief
-            </a>
-            <a
-              href="#airlift"
-              className="inline-flex min-h-11 items-center rounded-full border border-white/30 px-6 py-3 text-sm font-medium text-white hover:bg-white/10"
-            >
-              Explore Services
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Jump nav */}
-      <nav
-        aria-label="On this page"
-        className="border-b border-[var(--am-border)] bg-[var(--am-bg)]"
+<section className="relative min-h-[92vh] overflow-hidden">
+  <img
+    src={photos.hero}
+    alt="Air Center Helicopters expeditionary operations"
+    className="absolute inset-0 h-full w-full object-cover"
+  />
+  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20" />
+  <div className="relative z-10 mx-auto flex min-h-[92vh] max-w-6xl flex-col justify-end px-6 pb-16 pt-36 md:px-12 lg:px-16">
+    <p className="mb-5 text-xs uppercase tracking-[0.35em] text-white/60">
+      Core Services
+    </p>
+    <h1 className="max-w-4xl text-5xl font-semibold tracking-tight text-white md:text-7xl lg:text-8xl">
+      <HighlightText>CAPABILITIES</HighlightText>
+    </h1>
+    <p className="mt-6 max-w-lg text-base leading-relaxed text-white/75 md:text-lg">
+      Expeditionary airlift, VERTREP, personnel recovery, MEDEVAC, and
+      technical training — flown to the same standard for DoD, special
+      operations, and commercial partners.
+    </p>
+    <div className="mt-10">
+      <a
+        href="#request"
+        className="inline-flex min-h-11 items-center rounded-full bg-white px-7 py-3 text-sm font-medium text-black hover:bg-white/90"
       >
-        <div className="mx-auto flex max-w-6xl gap-1 overflow-x-auto px-6 py-3 md:px-12 lg:px-16">
-          {jumps.map((j) => (
-            <a
-              key={j.href}
-              href={j.href}
-              className="shrink-0 rounded-full px-4 py-2 text-sm text-[var(--am-muted)] transition-colors hover:bg-[var(--am-subtle)] hover:text-[var(--am-fg)]"
-            >
-              {j.label}
-            </a>
-          ))}
-        </div>
-      </nav>
+        Request Capabilities Brief
+      </a>
+    </div>
+  </div>
+</section>
+
+{/* Jump nav */}
+<nav
+  aria-label="On this page"
+  className="sticky top-0 z-40 bg-black"
+>
+  <div className="mx-auto flex max-w-6xl items-center justify-center gap-8 overflow-x-auto px-6 py-4 md:px-12 lg:px-16">
+    {jumps.map((j) => (
+      <a
+        key={j.href}
+        href={j.href}
+        className="shrink-0 text-sm font-medium tracking-wide text-white/70 transition-colors hover:text-white"
+      >
+        {j.label}
+      </a>
+    ))}
+  </div>
+</nav>
 
       {/* Overview */}
       <section
@@ -301,8 +295,8 @@ export default function CapabilitiesPage() {
             Why Air Center
           </p>
           <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-4xl">
-            Proven Performance. Expeditionary DNA.
-          </h2>
+  PROVEN PERFORMANCE. <HighlightText>EXPEDITIONARY DNA.</HighlightText>
+</h2>
           <p className="mt-6 text-lg leading-relaxed text-[var(--am-muted)]">
             Established in 1986, Air Center Helicopters is a U.S.-owned Small
             Business specializing in conventional, expeditionary, and
@@ -342,7 +336,7 @@ export default function CapabilitiesPage() {
             Contingency Operations
           </p>
           <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-4xl">
-            Expeditionary Airlift
+            EXPEDITIONARY AIRLIFT
           </h2>
           <p className="mt-6 text-base leading-relaxed text-[var(--am-muted)]">
             Fully self-sustaining passenger, cargo, and COMBI airlift for
@@ -376,7 +370,7 @@ export default function CapabilitiesPage() {
             Vertical Replenishment
           </p>
           <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-4xl">
-            Ship-Based Services
+            SHIP-BASED SERVICES
           </h2>
           <p className="mt-6 text-base leading-relaxed text-[var(--am-muted)]">
             Vertical replenishment and deck operations for U.S. Navy Combat
@@ -421,7 +415,7 @@ export default function CapabilitiesPage() {
               Search and Rescue
             </p>
             <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-4xl">
-              Personnel Recovery &amp; SAR
+              PERSONNEL RECOVERY
             </h2>
             <p className="mt-6 text-base leading-relaxed text-[var(--am-muted)]">
               Specialty niche experience recovering personnel in hostile,
@@ -515,7 +509,7 @@ export default function CapabilitiesPage() {
               Pilots &amp; Maintenance
             </p>
             <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-4xl">
-              Technical Training
+              TECHNICAL TRAINING
             </h2>
             <p className="mt-6 text-base leading-relaxed text-[var(--am-muted)]">
               World-class pilots and mechanics trained in-house under FAA
@@ -567,7 +561,7 @@ export default function CapabilitiesPage() {
             Approvals &amp; Standards
           </p>
           <h2 className="mt-4 max-w-2xl text-3xl font-semibold tracking-tight md:text-4xl">
-            Credentials that open doors worldwide.
+            CREDENTIALS
           </h2>
           <ul className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {credentials.map((c) => (
@@ -594,11 +588,28 @@ export default function CapabilitiesPage() {
         <div className="mx-auto grid max-w-6xl gap-16 lg:grid-cols-5">
           <div className="lg:col-span-2">
             <p className="text-xs uppercase tracking-[0.3em] text-[var(--am-muted)]">
-              Next Step
+              CAPABILITIES BRIEF
             </p>
             <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-4xl">
-              Request a Capabilities Brief.
-            </h2>
+  <HighlightText>
+    REQUEST CAPS BRIEF
+    <svg
+      width="28"
+      height="28"
+      viewBox="0 0 24 24"
+      fill="none"
+      className="ml-3 inline-block align-middle"
+    >
+      <path
+        d="M5 12H19M19 12L13 6M19 12L13 18"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  </HighlightText>
+</h2>
             <p className="mt-6 text-base leading-relaxed text-[var(--am-muted)]">
               Tell us about the mission set, theater, and timeline. We will
               respond with a tailored overview of airlift, recovery, medical,

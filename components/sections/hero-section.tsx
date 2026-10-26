@@ -144,7 +144,7 @@ export function HeroSection() {
                 >
                   Expeditionary Aviation Since 1986
                 </p>
-                <h1 className="w-full text-[10vw] md:text-[8vw] font-semibold leading-[0.9] tracking-tighter text-white text-center">
+                <h1 className="w-full text-[6.5vw] sm:text-[7vw] md:text-[8vw] font-semibold leading-[0.9] tracking-tight text-white text-center">
                   {word.split("").map((letter, index) => (
                     <span
                       key={index}
@@ -199,11 +199,18 @@ export function HeroSection() {
 
       <div className="h-[200vh]" />
 
-      <div className="px-6 pt-32 pb-28 md:pt-48 md:px-12 md:pb-36 lg:px-20 lg:pt-56 lg:pb-44">
-        <p className="mx-auto max-w-3xl text-center text-2xl leading-relaxed text-muted-foreground md:text-3xl lg:text-[2.5rem] lg:leading-snug">
-          Trusted. Tested. Ready.
-        </p>
-      </div>
+<div className="px-6 pt-32 pb-28 md:pt-48 md:px-12 md:pb-36 lg:px-20 lg:pt-56 lg:pb-44">
+  <div className="mx-auto flex max-w-3xl justify-center">
+    <Image
+      src="/images/usa-achi-logo.png"
+      alt="Air Center Helicopters"
+      width={420}
+      height={120}
+      className="h-auto w-full max-w-[280px] md:max-w-[380px] object-contain"
+      priority
+    />
+  </div>
+</div>
     </section>
   );
 }
