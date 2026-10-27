@@ -248,7 +248,7 @@ export default function CapabilitiesPage() {
     <p className="mb-5 text-xs uppercase tracking-[0.35em] text-white/60">
       Core Services
     </p>
-    <h1 className="max-w-4xl text-5xl font-semibold tracking-tight text-white md:text-7xl lg:text-8xl">
+    <h1 className="max-w-4xl text-4xl font-semibold tracking-tight text-white md:text-7xl lg:text-8xl">
       <HighlightText>CAPABILITIES</HighlightText>
     </h1>
     <p className="mt-6 max-w-lg text-base leading-relaxed text-white/75 md:text-lg">

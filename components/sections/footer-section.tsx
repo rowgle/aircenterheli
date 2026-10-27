@@ -45,6 +45,9 @@ export function FooterSection() {
             <p className="mt-4 text-sm text-muted-foreground">
               Spinks Airport | Burleson, TX
             </p>
+            <p className="mt-3 text-sm font-semibold tracking-wide text-foreground">
+              CAGE <span className="font-mono">0WRJ5</span>
+            </p>
           </div>
 
           {/* Services */}

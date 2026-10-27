@@ -7,7 +7,7 @@ export default function Home() {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('/images/cloudflight.jpg')",
+          backgroundImage: "url('/images/achipatch.jpg')",
         }}
       />
       {/* Subtle overlay for better contrast */}
